@@ -18,3 +18,21 @@ class MyGalery_TestCases(TestCase):
         self.assertTrue(isinstance(self.new_image,Image))
         self.assertTrue(isinstance(self.new_category,Category))
         self.assertTrue(isinstance(self.new_location,Location))
+
+    def test_save_method(self):
+        self.new_image.save_image()
+        all_objects = Image.objects.all()
+        self.assertTrue(len(all_objects)>0)
+
+    def test_delete_method(self):
+        self.new_image.save_image()
+        filtered_object = Image.objects.filter(image_name='learn')
+        Image.delete_image(filtered_object)
+        all_objects = Image.objects.all()
+        self.assertTrue(len(all_objects) == 0)
+
+    def test_display_all_objects_method(self):
+        self.new_image.save_image()
+        all_objects = Image.retrieve_all()
+        self.assertEqual(all_objects.image_name,'learn')
+
