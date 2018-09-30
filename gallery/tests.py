@@ -36,3 +36,10 @@ class MyGalery_TestCases(TestCase):
         all_objects = Image.retrieve_all()
         self.assertEqual(all_objects.image_name,'learn')
 
+
+    def test_update_single_object_property(self):
+        self.new_image.save_image()
+        filtered_object =Image.update_image('learn','Greener')
+        fetched = Image.objects.get(image_name='Greener')
+        self.assertEqual(fetched.image_name,'Greener')
+   
