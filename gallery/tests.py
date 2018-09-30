@@ -46,4 +46,8 @@ class MyGalery_TestCases(TestCase):
         self.new_image.save_image()
         fetched_image = Image.get_image_by_id(1)
         self.assertEqual(fetched_image.id,1)
-    
+    def test_search_by_category(self):
+        self.new_image.save_image()        
+        fetch_specific = Category.objects.get(cat_name='Dance')
+        self.assertTrue(fetch_specific.cat_name=='Dance')
+
