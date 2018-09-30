@@ -50,4 +50,7 @@ class MyGalery_TestCases(TestCase):
         self.new_image.save_image()        
         fetch_specific = Category.objects.get(cat_name='Dance')
         self.assertTrue(fetch_specific.cat_name=='Dance')
-
+    def test_filter_by_location(self):
+        self.new_image.save_image()        
+        fetch_specific = Location.objects.get(location_name='Mombasa')
+        self.assertTrue(fetch_specific.location_name=='Mombasa')
