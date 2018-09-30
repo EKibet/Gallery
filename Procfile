@@ -1,1 +1,1 @@
-web: gunicorn unsplashlite.wsgi
+web: gunicorn MyGallaerie.wsgi
