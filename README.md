@@ -59,7 +59,7 @@ Use the command given below to run automated tests.
 
 ## Built With
 
-* [Django](https://www.djangoproject.com/) - The web framework used
+* [Django](https://www.djangoproject.com/) - web framework used
 * Javascript - For DOM(Document Object Manipulation) scripts
 * HTML - For building Mark Up pages/User Interface
 * CSS - For Styling User Interface
