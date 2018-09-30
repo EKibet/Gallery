@@ -1,1 +1,1 @@
-web: gunicorn MyGallaerie.wsgi -b localhost:8000
+web: gunicorn MyGallaerie.wsgi
