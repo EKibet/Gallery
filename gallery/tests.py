@@ -42,4 +42,8 @@ class MyGalery_TestCases(TestCase):
         filtered_object =Image.update_image('learn','Greener')
         fetched = Image.objects.get(image_name='Greener')
         self.assertEqual(fetched.image_name,'Greener')
-   
+    def test_get_image_by_id(self):
+        self.new_image.save_image()
+        fetched_image = Image.get_image_by_id(1)
+        self.assertEqual(fetched_image.id,1)
+    
