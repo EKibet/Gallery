@@ -14,4 +14,7 @@ class MyGalery_TestCases(TestCase):
         Location.objects.all().delete()
         Image.objects.all().delete()
 
-   
+    def test_is_instance(self):
+        self.assertTrue(isinstance(self.new_image,Image))
+        self.assertTrue(isinstance(self.new_category,Category))
+        self.assertTrue(isinstance(self.new_location,Location))
