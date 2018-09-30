@@ -9,6 +9,16 @@ function CopyFunction() {
 }
 </script>
 	<div class="container-fluid">
+        <div class="row">
+                <div class="row">
+                        {% if all_images%}
+
+                        {% else %}
+                          <h2> Found 0 images for the search term {{message}}</h2>
+                        {% endif %}
+                    
+                      </div>
+        </div>
 		<div class="row">
             {% for image in all_images %}
 
